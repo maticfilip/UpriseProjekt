@@ -1,0 +1,29 @@
+body{
+    background-image: url("rename.jpg")
+}
+
+#popis{
+    width:70vh;
+    height:90%;
+    border: 2px solid gray;
+    padding-left:3em;
+    padding-right:3em;
+    visibility:visible;
+    transition:0.5s;
+}
+.btn1{
+    border:none;
+    padding:0.6em;
+    background-color:violet;
+    color:white;
+    margin-bottom:5px;
+}
+.btn2{
+    border:none;
+    padding:0.6em;
+    background-color:violet;
+    color:white;
+    visibility:hidden;
+    margin-bottom:5px;
+    margin-left:50px;
+}
