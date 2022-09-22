@@ -50,24 +50,22 @@
                    osobe.push(osoba);   
                 }
            //--------sortiranje po prezimenu-------//
-        //    for(i=0;i<=osobe.length;i++){
-        //    osobe.sort(function(a,b){
-        //         if(a.surname<b.surname){return -1;}
-        //         if(a.surname>b.surname){return 1;}
-        //     });
-        // }
-        osobe.sort(function(a, b){
-    if(a.surname < b.surname) { return -1; }
-    if(a.surname > b.surname) { return 1; }
-    return 0;
-})
+        for(i=0;i<=osobe.length;i++){
+           osobe.sort(function(a,b){
+                if(a.surname.toLowerCase<b.surname.toLowerCase){return -1;}
+                if(a.surname.toLowerCase>b.surname.toLowerCase){return 1;}
+            });
+            
+        } 
             //---------mapiranje za 5 godina starije-//
-            newAge=[];
-             for(i=0;i<osobe.length;i++){
-                 osobe[i].newage=parseInt(osobe[i].age)+5;
-                 newAge.push(osobe[i].newage);
-             ;}
-             
+//             newAge=[];
+//              for(i=0;i<osobe.length;i++){
+//                  osobe[i].newage=parseInt(osobe[i].age)+5;
+//                  newAge.push(osobe[i].newage);
+//              ;}
+             const noveOsobe=osobe.map(mapiranje);
+             function mapiranje(){
+                 osobe.age:parseInt(osobe.age)+=5;
 
             //----------prikaz podataka------------//               
                   let popis=document.getElementById("popis");
